@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Manipulando DOM</title>
+</head>
+<body>
+
+    <!-- Criando elementos html no corpo através da manipulação 
+    da arvore de elementos DOM com javascript -->
+    <div id="app"></div>
+
+    <script>
+        
+        // criando um tag do tipo link <a>
+        var linkElement = document.createElement('a');
+        linkElement.setAttribute('href', 'https://fire-nuxt-auth.netlify.com');
+
+        // manipulando o estilo css do elemento criado
+        linkElement.setAttribute('style', 'color:blue;font-size:30px;text-decoration:none;');
+
+        // crianto o texto de que será exibido no link 
+        var textoLink = document.createTextNode('Acesso ao Site');
+        linkElement.appendChild(textoLink);
+
+        // inserindo o novo elemento no copo do html
+        var container = document.querySelector('#app');
+        container.appendChild(linkElement);
+        
+    </script>
+
+</body>
+</html>
