@@ -3,7 +3,7 @@ import './styles.css';
 
 const Header = () => (
     <header id="main-header">
-        JS-Hunt - Treinamento
+        JS-Hunt - Treinamento Rocketseat
     </header>
 );
 

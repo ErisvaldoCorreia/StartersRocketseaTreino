@@ -1,0 +1,41 @@
+.lista-produtos {
+    max-width: 700px;
+    margin: 20px auto 0;
+    padding: 0 20px;
+}
+
+.lista-produtos article {
+    background: #fff;
+    border: 1px solid rgb(202, 194, 194);
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.lista-produtos article p {
+    font-size: 15px;
+    color: rgb(107, 106, 106);
+    margin-top: 5px;
+    line-height: 24px;
+}
+
+.lista-produtos article a {
+    height: 42px;
+    border-radius: 5px;
+    border: 2px solid #da552f;
+    background: none;
+    margin-top: 10px;
+    color: #da552f;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s;
+}
+
+.lista-produtos article a:hover {
+    background: #da552f;
+    color: #fff;
+}

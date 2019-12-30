@@ -1,12 +1,17 @@
 import React, { Component } from 'react';
 import api from '../../services/api';
 
+import './styles.css';
+
 export default class Main extends Component {
 
+    // declaração de estado para armazenar valores.
+    // o estado é declarado em formato de objeto
     state = {
         products: [],
     }
 
+    // essa chamada é feita sempre que o componente é montado na aplicação.
     componentDidMount(){
         this.loadProducts();
     };
@@ -14,6 +19,7 @@ export default class Main extends Component {
     loadProducts = async () => {
         const response = await api.get('/products');
 
+        // atribui uma alteração no estado.
         this.setState({products: response.data.docs })
 
         // Testando Resposta dos dados vindo da Api
@@ -21,14 +27,21 @@ export default class Main extends Component {
     }
 
     render(){
+        
+        // desestrutura do estado para recuperar produtos
+        const { products } = this.state;
+
         return (
             <div className="lista-produtos">
-                <h1>Contagem de Produtos: {this.state.products.length}</h1>
-                
-                {this.state.products.map(products => (
-                    <h3 key={products._id}>{products.title}</h3>
+                {products.map(products => (
+                    <article key={products._id}>
+                        <strong>{products.title}</strong>
+                        <p>{products.description}</p>
+                        <a href="#">Detalhes</a>
+                    </article>
                 ))}
             </div>
         );
     }
+
 }

@@ -21,4 +21,4 @@ requireDir('./src/models')
 app.use('/api', require('./src/routes'))
 
 // habilitando qual porta ira rodar nosso servidor.
-app.listen(3001)
+app.listen(3333)
