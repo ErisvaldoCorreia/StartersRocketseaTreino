@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './styles.css';
 
 import Header from './components/Header/';
-import Main from './pages/main';
+import Routes from './routes';
 
 export default class App extends Component {
  
@@ -11,7 +11,7 @@ export default class App extends Component {
 
       <div className="App">
         <Header />
-        <Main />
+        <Routes />
       </div>
 
     );

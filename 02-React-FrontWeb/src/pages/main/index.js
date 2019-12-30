@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import api from '../../services/api';
 
 import './styles.css';
@@ -59,7 +60,9 @@ export default class Main extends Component {
                     <article key={products._id}>
                         <strong>{products.title}</strong>
                         <p>{products.description}</p>
-                        <a href="#">Detalhes</a>
+                        
+                        {/* substitui a tag a como função de link para acessar a navegação */}
+                        <Link to={`/products/${products._id}`}>Detalhes</Link>
                     </article>
                 ))}
                 <div className="actions">
