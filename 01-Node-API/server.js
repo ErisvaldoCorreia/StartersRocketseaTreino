@@ -10,7 +10,7 @@ app.use(express.json())
 app.use(cors())
 
 mongoose.connect(
-    'mongodb://localhost:27017/meubancoapi', 
+    'mongodb+srv://eris:eris2015@cluster0-iajwb.mongodb.net/test?retryWrites=true&w=majority', 
     { useNewUrlParser: true }
 )
 
@@ -22,3 +22,4 @@ app.use('/api', require('./src/routes'))
 
 // habilitando qual porta ira rodar nosso servidor.
 app.listen(3333)
+console.log('funcionando perfeitamente')
