@@ -10,7 +10,7 @@ app.use(express.json())
 app.use(cors())
 
 mongoose.connect(
-    'mongodb+srv://eris:eris2015@cluster0-iajwb.mongodb.net/test?retryWrites=true&w=majority', 
+    'mongodb+srv://eris:<pass>@cluster0-iajwb.mongodb.net/test?retryWrites=true&w=majority', 
     { useNewUrlParser: true }
 )
 
