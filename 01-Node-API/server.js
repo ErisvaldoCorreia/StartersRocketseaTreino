@@ -2,6 +2,8 @@ const express = require('express')
 // import cors para permissão de acesso externo a api
 const cors = require('cors')
 const mongoose = require('mongoose')
+require('dotenv').config();
+
 // importando biblioteca para conectar diretório de models
 const requireDir = require('require-dir')
 
@@ -10,7 +12,7 @@ app.use(express.json())
 app.use(cors())
 
 mongoose.connect(
-    'mongodb+srv://eris:<pass>@cluster0-iajwb.mongodb.net/test?retryWrites=true&w=majority', 
+    process.env.DATABASE_CONNECTION_STRING, 
     { useNewUrlParser: true }
 )
 
